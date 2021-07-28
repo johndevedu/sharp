@@ -58,6 +58,9 @@ const handleError = function (err) {
 const extractTarball = function (tarPath, platformAndArch) {
   console.log(tarPath, platformAndArch)
   const vendorPath = path.join(__dirname, '..', 'vendor');
+  console.log('vendorPath', vendorPath)
+  
+  
   libvips.mkdirSync(vendorPath);
   const versionedVendorPath = path.join(vendorPath, minimumLibvipsVersion);
   libvips.mkdirSync(versionedVendorPath);
