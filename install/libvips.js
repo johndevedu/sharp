@@ -63,6 +63,7 @@ const extractTarball = function (tarPath, platformAndArch) {
   
   libvips.mkdirSync(vendorPath);
   const versionedVendorPath = path.join(vendorPath, minimumLibvipsVersion);
+  console.log('versionedVendorPath', versionedVendorPath)
   libvips.mkdirSync(versionedVendorPath);
 
   const ignoreVendorInclude = hasSharpPrebuild.includes(platformAndArch) && !process.env.npm_config_build_from_source;
